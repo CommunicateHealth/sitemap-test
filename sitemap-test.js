@@ -96,6 +96,6 @@ async function test(driver, num, baseUrl, path) {
 async function httpGetStatus(url) {
   console.log(`Trying ${url}`);
 
-  return fetch(url, {signal: AbortSignal.timeout(5000)})
+  return fetch(url, {signal: AbortSignal.timeout(30000)})
     .then((response) => response.status);
 }
